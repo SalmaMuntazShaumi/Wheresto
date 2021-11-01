@@ -8,12 +8,22 @@
     tools:context=".model.Bookmark">
 
     <TextView
+        android:id="@+id/txtbm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bookmark"
         android:textSize="@dimen/_30sdp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/redhatdisplay_bold"
-        android:layout_centerInParent="true"/>
+        android:textColor="#001D5B"
+        android:fontFamily="@font/redhatdisplay_extrabold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bm_list"
+        android:layout_below="@id/txtbm"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
