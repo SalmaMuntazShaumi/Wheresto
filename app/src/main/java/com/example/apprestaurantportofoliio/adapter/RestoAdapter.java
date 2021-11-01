@@ -18,7 +18,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ListViewHolder>{
+public class RestoAdapter extends RecyclerView.Adapter<RestoAdapter.ListViewHolder>{
 
     private List<Model> dataList;
     private List<Model> filteredDataList;
@@ -34,7 +34,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ListViewHolder>{
         mListener = listener;
     }
 
-    public Adapter(Context mContext, List<Model> dataList) {
+    public RestoAdapter(Context mContext, List<Model> dataList) {
         this.mContext = mContext;
         this.dataList = dataList;
         this.filteredDataList = dataList;

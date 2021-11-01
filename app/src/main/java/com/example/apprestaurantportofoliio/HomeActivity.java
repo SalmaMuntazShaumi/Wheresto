@@ -16,7 +16,7 @@ import android.widget.ImageButton;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.apprestaurantportofoliio.adapter.Adapter;
+import com.example.apprestaurantportofoliio.adapter.RestoAdapter;
 import com.example.apprestaurantportofoliio.model.Bookmark;
 import com.example.apprestaurantportofoliio.model.Model;
 import com.example.apprestaurantportofoliio.model.UserProfile;
@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
     private final String IMAGE_URL = "https://restaurant-api.dicoding.dev/images/medium/";
     private RecyclerView recyclerView;
     ArrayList<Model> arrayList;
-    Adapter adapter;
+    RestoAdapter restoAdapter;
     EditText SearchView;
     CharSequence search="";
     Realm realm;
@@ -84,7 +84,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                adapter.getFilter().filter(charSequence);
+                restoAdapter.getFilter().filter(charSequence);
                 search = charSequence;
             }
 
@@ -127,10 +127,10 @@ public class HomeActivity extends AppCompatActivity {
                             RecyclerView recyclerView = findViewById(R.id.list);
                             int numberOfColumns = 2;
                             recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), numberOfColumns));
-                            adapter = new Adapter(getApplicationContext(), arrayList);
-                            recyclerView.setAdapter(adapter);
+                            restoAdapter = new RestoAdapter(getApplicationContext(), arrayList);
+                            recyclerView.setAdapter(restoAdapter);
 
-                            adapter.setOnItemClickListener(new Adapter.OnItemClickListener() {
+                            restoAdapter.setOnItemClickListener(new RestoAdapter.OnItemClickListener() {
                                 @Override
                                 public void onItemClick(int position) {
                                     Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
