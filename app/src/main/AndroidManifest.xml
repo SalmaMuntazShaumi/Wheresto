@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppRestaurantPortofoliio">
-        <activity android:name=".Login">
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".WelcomePage" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/SplashScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>
