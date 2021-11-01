@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AppRestaurantPortofoliio</string>
+    <string name="app_name">Wheresto</string>
+    <string name="hello">Hello,</string>
+    <string name="user_name">User</string>
 </resources>

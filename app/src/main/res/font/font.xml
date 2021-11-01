@@ -36,14 +36,62 @@
         android:fontStyle="italic"
         android:fontWeight="400"
         android:font="@font/redhatdisplay_lightitalic" />
+
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_black_italic" />
+
+    <font
+    android:fontStyle="normal"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_bold" />
+
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_bold_italic" />
+
+    <font
+    android:fontStyle="normal"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_extra_bold" />
+
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_extra_bold_italic" />
+
+    <font
+    android:fontStyle="italic"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_italic" />
+
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_light" />
+
+    <font
+    android:fontStyle="italic"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_light_italic" />
+
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/redhatdisplay_medium" />
+
     <font
         android:fontStyle="italic"
         android:fontWeight="400"
         android:font="@font/redhatdisplay_mediumitalic" />
+
+    <font
+    android:fontStyle="italic"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_medium_italic" />
+
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
@@ -56,4 +104,14 @@
         android:fontStyle="italic"
         android:fontWeight="400"
         android:font="@font/redhatdisplay_semibolditalic" />
+
+    <font
+    android:fontStyle="normal"
+    android:fontWeight="400"
+    android:font="@font/redhatdisplay_semibold" />
+
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_semibold_italic" />
 </font-family>
