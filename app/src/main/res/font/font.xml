@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_black" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_blackitalic" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_bold" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_bolditalic" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_extrabold" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_extrabolditalic" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_italic" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_light" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_lightitalic" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_medium" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_mediumitalic" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_regular" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_semibold" />
+    <font
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        android:font="@font/redhatdisplay_semibolditalic" />
+</font-family>
