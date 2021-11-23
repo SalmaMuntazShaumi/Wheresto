@@ -1,6 +1,7 @@
-package com.example.apprestaurantportofoliio.adapter;
+package com.example.apprestaurantportofoliio;
 
 import android.content.Context;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.apprestaurantportofoliio.model.Model;
-import com.example.apprestaurantportofoliio.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -37,7 +36,7 @@ public class RestoAdapter extends RecyclerView.Adapter<RestoAdapter.ListViewHold
     public RestoAdapter(Context mContext, List<Model> dataList) {
         this.mContext = mContext;
         this.dataList = dataList;
-        this.filteredDataList = dataList;
+        filteredDataList = new ArrayList<>(dataList);
     }
 
     @Override
@@ -47,13 +46,14 @@ public class RestoAdapter extends RecyclerView.Adapter<RestoAdapter.ListViewHold
         return new ListViewHolder(view, mListener);
     }
 
+
     @Override
     public void onBindViewHolder(ListViewHolder holder, int position) {
         holder.tv_title.setText(filteredDataList.get(position).getName());
-        holder.tv_loc.setText(filteredDataList.get(position).getLocation());
-        holder.tv_rate.setText(String.valueOf(filteredDataList.get(position).getRate()));
+        holder.tv_loc.setText(filteredDataList.get(position).getCity());
+        holder.tv_rate.setText(String.valueOf(filteredDataList.get(position).getRating()));
         Picasso.get()
-                .load(dataList.get(position).getImage())
+                .load(dataList.get(position).getPictureId())
                 .placeholder(R.mipmap.ic_launcher)
                 .error(R.mipmap.ic_launcher_round)
                 .into(holder.img_list);
@@ -122,7 +122,6 @@ public class RestoAdapter extends RecyclerView.Adapter<RestoAdapter.ListViewHold
 
             @Override
             protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-
                 filteredDataList = (List<Model>)filterResults.values;
                 notifyDataSetChanged();
 

@@ -6,15 +6,179 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main"
-    tools:context=".model.UserProfile">
+    tools:context=".UserProfile">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/header_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/navyblue"
+            android:fontFamily="@font/redhatdisplay_semibold"
+            android:layout_margin="@dimen/_15sdp"/>
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_settings_24"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_15sdp"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/users_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="@dimen/_30sdp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/redhatdisplay_bold"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/header_profile"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
 
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jackson Putra Bangsa"
+            android:fontFamily="@font/redhatdisplay_bold"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/navyblue"
+            android:layout_below="@id/profile_img"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerInParent="true"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/edit_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/users_data"
+        android:layout_margin="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_12sdp"/>
+
+        <EditText
+            android:id="@+id/username_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/backgound_edittext" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_below="@id/username_et"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_12sdp"/>
+
+        <EditText
+            android:id="@+id/phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgound_edittext"
+            android:layout_below="@id/phone"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_et"
+            android:text="Email"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_12sdp"/>
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgound_edittext"
+            android:layout_below="@id/email"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_profile"
+        android:layout_below="@id/edit_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/navyblue"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:text="Save"
+            app:shapeAppearanceOverlay="@style/leaf" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_profile"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/logout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:text="Logout?"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap Here"
+            android:textColor="#E55252"
+            android:layout_toRightOf="@id/logout_text"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/redhatdisplay_medium" />
+
+    </RelativeLayout>
 </RelativeLayout>

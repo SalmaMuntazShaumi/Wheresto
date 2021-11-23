@@ -3,18 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/backgound_edittext.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/background_detail_img.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/background_grid.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/background_image_detail.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/background_search.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/detailbox.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_baseline_bookmark_24.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/drawable/ic_outline_settings_24.xml" value="0.2703125" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/font/font.xml" value="0.284375" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_bookmark.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_detail.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_detail.xml" value="0.536" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_user_profile.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/rv_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_user_profile.xml" value="0.264" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/activity_welcome_page.xml" value="0.264" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/bm_list.xml" value="0.264" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/menu_list.xml" value="0.4" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/layout/rv_list.xml" value="0.2" />
         <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/menu/my_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/kywij/AndroidStudioProjects/RestaurantPortofolio/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>
     </option>
   </component>

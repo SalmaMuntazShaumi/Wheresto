@@ -18,15 +18,16 @@
             android:theme="@style/SplashScreenStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
         </activity>
         <activity
-            android:name=".model.UserProfile"
+            android:name=".UserProfile"
             android:exported="false" />
         <activity
-            android:name=".model.Bookmark"
+            android:name=".Bookmark"
             android:exported="false" />
         <activity
             android:name=".DetailActivity"

@@ -75,7 +75,7 @@
             android:translationY="@dimen/_65sdp"
             app:borderWidth="0dp"
             app:fabCustomSize="40dp"
-            app:tint="@color/blue" />
+            app:tint="@color/navyblue" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -91,5 +91,6 @@
         </LinearLayout>
 
     </RelativeLayout>
+
 
 </androidx.core.widget.NestedScrollView>

@@ -13,5 +13,6 @@
     <color name="bluesky">#E9ECFB</color>
     <color name="navyblue">#001D5B</color>
     <color name="main">#E9ECFB</color>
-    <color name="blue">#001D5B</color>
+    <color name="grey">#A7A7A7</color>
+    <color name="bluegrey">#F6F8FF</color>
 </resources>

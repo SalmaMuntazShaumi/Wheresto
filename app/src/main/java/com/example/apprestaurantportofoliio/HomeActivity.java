@@ -10,45 +10,45 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.apprestaurantportofoliio.adapter.RestoAdapter;
-import com.example.apprestaurantportofoliio.model.Bookmark;
-import com.example.apprestaurantportofoliio.model.Model;
-import com.example.apprestaurantportofoliio.model.UserProfile;
-import com.example.apprestaurantportofoliio.realm.RealmHelper;
+//import com.example.apprestaurantportofoliio.detail.DetailModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import io.realm.Realm;
-import io.realm.RealmConfiguration;
+import io.realm.RealmList;
 
 public class HomeActivity extends AppCompatActivity {
 
 
     private final String API_URL = "https://restaurant-api.dicoding.dev/list";
-    private final String IMAGE_URL = "https://restaurant-api.dicoding.dev/images/medium/";
+    private final String IMAGE_URL = "https://restaurant-api.dicoding.dev/images/large/";
     private RecyclerView recyclerView;
     ArrayList<Model> arrayList;
     RestoAdapter restoAdapter;
     EditText SearchView;
     CharSequence search="";
-    Realm realm;
-    RealmHelper realmHelper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_home);
+
 
         FloatingActionButton bm_btn = findViewById(R.id.bm_btn);
         ImageButton user_btn  = findViewById(R.id.profile_btn);
@@ -95,15 +95,10 @@ public class HomeActivity extends AppCompatActivity {
 
         });
 
-        //Set up Realm
-        Realm.init(HomeActivity.this);
-        RealmConfiguration configuration = new RealmConfiguration.Builder().allowWritesOnUiThread(true).build();
-        realm = Realm.getInstance(configuration);
-
         getData();
     }
 
-    private void getData() {
+    private void getData(){
         Log.d("getData", "yes");
         AndroidNetworking.get(API_URL)
                 .build()
@@ -116,10 +111,14 @@ public class HomeActivity extends AppCompatActivity {
                                 JSONObject teamObject = teamsArray.getJSONObject(i);
                                 String name = teamObject.getString("name");
                                 String location = teamObject.getString("city");
+                                String desc = teamObject.getString("description");
                                 double rate = teamObject.getDouble("rating");
                                 String image = IMAGE_URL +  teamObject.getString("pictureId");
-                                arrayList.add(new Model(image, name, location, rate));
+                                String id = teamObject.getString("id");
+                                RealmList<String> emptyList = new RealmList<>();
 
+                                Model model = new Model(id, name, desc, location, "", image, rate, emptyList, emptyList, emptyList, false);
+                                arrayList.add(model);
                             }
 
                             Log.d("arrsize", ""+teamsArray.length());
@@ -135,9 +134,12 @@ public class HomeActivity extends AppCompatActivity {
                                 public void onItemClick(int position) {
                                     Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
                                     intent.putExtra("name", arrayList.get(position).getName());
-                                    intent.putExtra("location", arrayList.get(position).getLocation());
-                                    intent.putExtra("rate", arrayList.get(position).getRate());
-                                    intent.putExtra("image", arrayList.get(position).getImage());
+                                    intent.putExtra("city", arrayList.get(position).getCity());
+                                    intent.putExtra("rating", arrayList.get(position).getRating());
+                                    intent.putExtra("description", arrayList.get(position).getDesc());
+                                    intent.putExtra("address", arrayList.get(position).getAddress());
+                                    intent.putExtra("image", arrayList.get(position).getPictureId());
+                                    intent.putExtra("idResto", arrayList.get(position).getId());
                                     startActivity(intent);
                                 }
                             });

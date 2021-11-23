@@ -1,4 +1,4 @@
-package com.example.apprestaurantportofoliio.realm;
+package com.example.apprestaurantportofoliio;
 
 import android.app.Application;
 
@@ -14,7 +14,7 @@ public class MyApplication extends Application {
         Realm.init(this);
         RealmConfiguration configuration = new RealmConfiguration.Builder()
                 .name("restaurant.db")
-                .schemaVersion(0)
+                .schemaVersion(1)
                 .build();
         Realm.setDefaultConfiguration(configuration);
     }

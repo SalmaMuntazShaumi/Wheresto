@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rv_layout_list_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/img_list"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_title_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:layout_toRightOf="@id/img_list" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_list"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/img_list"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:text="city"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_list"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/location"
+            android:drawableLeft="@drawable/star"
+            android:fontFamily="@font/redhatdisplay_medium"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="rate"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

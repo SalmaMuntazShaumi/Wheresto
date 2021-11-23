@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
+
         txtusername =(EditText)findViewById(R.id.txtusername);
         txtpassword =(EditText)findViewById(R.id.txtpassword);
         btnsignin =(Button) findViewById(R.id.btnsignin);

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "331411930605",
+    "firebase_url": "https://wheresto-default-rtdb.firebaseio.com",
+    "project_id": "wheresto",
+    "storage_bucket": "wheresto.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331411930605:android:f87844063209455bd8fbe4",
+        "android_client_info": {
+          "package_name": "com.example.apprestaurantportofoliio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331411930605-u0b383mqaj6ovcdcda70vpbarngg7pef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxTn0pn9QFPJkSlEczDG5Fdg2ope2lQIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331411930605-u0b383mqaj6ovcdcda70vpbarngg7pef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main"
-    tools:context=".model.Bookmark">
+    tools:context=".Bookmark">
 
     <TextView
         android:id="@+id/txtbm"
@@ -20,10 +20,22 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/bm_list"
-        android:layout_below="@id/txtbm"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginHorizontal="@dimen/_15sdp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtbm"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tv_item"
+        android:text="You don't have any bookmark"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/redhatdisplay_medium"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
 
 </RelativeLayout>

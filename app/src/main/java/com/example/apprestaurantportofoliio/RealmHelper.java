@@ -1,10 +1,8 @@
-package com.example.apprestaurantportofoliio.realm;
+package com.example.apprestaurantportofoliio;
 
 import android.util.Log;
 
-import com.example.apprestaurantportofoliio.model.Model;
-
-import java.util.List;
+//import com.example.apprestaurantportofoliio.detail.DetailModel;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -16,22 +14,15 @@ public class RealmHelper {
         this.realm = realm;
     }
 
-    // To save data into database
-    public void save(final Model Model) {
+    // To save data into database//import com.example.apprestaurantportofoliio.Model;
+    public void save(final Model detailModel) {
         realm.executeTransaction(new Realm.Transaction() {
+
             @Override
             public void execute(Realm realm) {
                 if (realm != null) {
                     Log.e("Created", "Database was created");
-                    Number currentIdNum = realm.where(Model.class).max("id");
-                    int nextId;
-                    if (currentIdNum == null) {
-                        nextId = 1;
-                    } else {
-                        nextId = currentIdNum.intValue() + 1;
-                    }
-                    Model.setId(nextId);
-                    Model model = realm.copyToRealm(Model);
+                    Model Models = realm.copyToRealm(detailModel);
                     Log.d("Realm", "Item saved");
                 } else {
                     Log.e("ppppp", "execute: Database not Exist");
@@ -40,19 +31,26 @@ public class RealmHelper {
         });
     }
 
+    public RealmResults<Model> getRestoById(String id) {
+        final RealmResults<Model> results = realm.where(Model.class).equalTo("id", id).findAll();
+
+        return results;
+    }
+
     // TO get all data from database
-    public List<Model> getAllSports() {
+    public RealmResults<Model> getAllResto() {
         RealmResults<Model> results = realm.where(Model.class).findAll();
+
         return results;
     }
 
     // To delete data from database
-    public void delete(Integer id) {
-        final RealmResults<Model> model = realm.where(Model.class).equalTo("id", id).findAll();
+    public void delete(String id) {
+        final RealmResults<Model> models = realm.where(Model.class).equalTo("id", id).findAll();
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                model.deleteFromRealm(0);
+                models.deleteFromRealm(0);
             }
         });
     }
