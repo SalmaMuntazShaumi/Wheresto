@@ -10,8 +10,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.apprestaurantportofoliio.realm.Register;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -20,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText txtusername, txtpassword;
+    TextView tvText;
     Button btnsignin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,14 @@ public class Login extends AppCompatActivity {
         txtusername =(EditText)findViewById(R.id.txtusername);
         txtpassword =(EditText)findViewById(R.id.txtpassword);
         btnsignin =(Button) findViewById(R.id.btnsignin);
+        tvText = findViewById(R.id.tv_text);
+
+        tvText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(getApplicationContext(), Register.class);
+            }
+        });
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

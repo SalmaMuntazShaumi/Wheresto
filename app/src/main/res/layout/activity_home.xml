@@ -24,6 +24,14 @@
             android:backgroundTint="@color/main"
             android:src="@drawable/user" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:id="@+id/btn_logout"
+            android:text="Log Out"/>
+
         <TextView
             android:id="@+id/hello"
             android:layout_width="wrap_content"

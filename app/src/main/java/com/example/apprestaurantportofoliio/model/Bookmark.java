@@ -38,6 +38,7 @@ public class Bookmark extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        getSupportActionBar().hide();
 
         // Setup Realm
         RealmConfiguration configuration = new RealmConfiguration.Builder().allowWritesOnUiThread(true).build();

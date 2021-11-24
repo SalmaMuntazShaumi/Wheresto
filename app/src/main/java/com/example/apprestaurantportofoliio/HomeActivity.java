@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -22,6 +23,7 @@ import com.example.apprestaurantportofoliio.model.Model;
 import com.example.apprestaurantportofoliio.model.UserProfile;
 import com.example.apprestaurantportofoliio.realm.RealmHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -43,7 +45,7 @@ public class HomeActivity extends AppCompatActivity {
     CharSequence search="";
     Realm realm;
     RealmHelper realmHelper;
-
+    Button btn_logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,11 +54,23 @@ public class HomeActivity extends AppCompatActivity {
 
         FloatingActionButton bm_btn = findViewById(R.id.bm_btn);
         ImageButton user_btn  = findViewById(R.id.profile_btn);
+        Button btn_logout = findViewById(R.id.btn_logout);
 
 
         recyclerView = findViewById(R.id.list);
         SearchView = findViewById(R.id.search_nav);
         arrayList = new ArrayList<>();
+
+        getSupportActionBar().hide();
+
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),WelcomePage.class));
+                finish();
+            }
+        });
 
 
         bm_btn.setOnClickListener(new View.OnClickListener() {
