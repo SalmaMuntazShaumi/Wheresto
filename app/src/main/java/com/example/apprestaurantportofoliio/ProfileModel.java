@@ -1,7 +1,5 @@
 package com.example.apprestaurantportofoliio;
 
-import io.realm.RealmObject;
-
 public class ProfileModel{
 
     String username, phone, email;
